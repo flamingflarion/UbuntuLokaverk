@@ -1,0 +1,22 @@
+                                      
+
+$TTL    604800
+@       IN      SOA     ddp.is. root.ddp.is. (
+                        3       ; Serial
+                        604800  ; Refresh
+                        86400   ; Retry
+                        2419200 ; Expire
+                        604800 ); Negative Cache TTL
+;---Name Server Information
+
+@       IN      NS      server1.ddp.is.
+
+;---Reverse lookup for Name Server
+
+10      IN      PTR     server1.ddp.is.
+
+;---PTR Record IP address to HostName
+
+20      IN      PTR     client1.ddp.is.
+15      IN      PTR     mail1.ddp.is.
+
