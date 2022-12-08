@@ -1,0 +1,29 @@
+$TTL    604800
+@       IN      SOA     server1.ddp.is. root.ddp.is. (
+                        3               ; Serial
+                        604800          ; Refresh
+                        86400           ; Retry
+                        2419200 ; Expire
+                        604800 )        ; Negative Cache TTL
+;--- Name Server Information
+
+@       IN      NS      server1.ddp.is.
+
+;--- IP address of Name Server
+
+server1 IN      A       192.168.100.10
+
+;--- Mail Exchanger ( if exists )
+
+ddp.is. IN      MX 10   mail1.ddp.is.
+
+;--- A - Record HostName To Ip Address
+
+mail1   IN      A       192.168.100.15
+client1 IN      A       192.168.100.20
+;--- CNAME record
+
+www     IN      CNAME   client1.ddp.is.
+ftp     IN      CNAME   client1.ddp.is.
+
+
